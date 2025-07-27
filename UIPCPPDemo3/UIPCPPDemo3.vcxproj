@@ -102,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,12 +124,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cjson.h" />
     <ClInclude Include="FSUIPC_User64.h" />
     <ClInclude Include="IPCuser64.h" />
+    <ClInclude Include="mongoose.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cjson.c" />
     <ClCompile Include="IPCuser64.c" />
+    <ClCompile Include="mongoose.c" />
     <ClCompile Include="UIPCPPDemo3.c" />
   </ItemGroup>
   <ItemGroup>

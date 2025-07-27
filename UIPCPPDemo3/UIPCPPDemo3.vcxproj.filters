@@ -24,12 +24,24 @@
     <ClInclude Include="IPCuser64.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mongoose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cjson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UIPCPPDemo3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IPCuser64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mongoose.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cjson.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
