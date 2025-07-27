@@ -112,7 +112,7 @@ void convert_data(const unsigned char* raw_data, size_t size, const char* target
         free(bitsStr);
     } else if (strcmp(targetType, "raw") == 0) {
         char* hex_str = bin2hex(raw_data, size);
-        cJSON_AddStringToObject(result_obj, "rawBytesHex", hex_str);
+        cJSON_AddStringToObject(result_obj, "convertedValue", hex_str);
         free(hex_str);
     }
     else if (strcmp(targetType, "bcd") == 0) {
@@ -122,7 +122,7 @@ void convert_data(const unsigned char* raw_data, size_t size, const char* target
 		int d3 = (bcd >> 4) & 0xF;
 		int d4 = bcd & 0xF;
         int res = d1 * 1000 + d2 * 100 + d3 * 10 + d4;
-        cJSON_AddNumberToObject(result_obj, "bcd", res);
+        cJSON_AddNumberToObject(result_obj, "rawBytesHex", res);
     }
 
 
@@ -268,7 +268,7 @@ static void fn(struct mg_connection* c, int ev, void* ev_data) {
     if (ev == MG_EV_HTTP_MSG) {
         struct mg_http_message* hm = (struct mg_http_message*)ev_data;
 
-        if (mg_match(hm->uri, mg_str("/api/sum"), NULL)) {
+        if (mg_match(hm->uri, mg_str("/api/uipc"), NULL)) {
             if (hm->body.len == 0) {
                 mg_http_reply(c, 400, "Content-Type: application/json\r\n",
                     "{\"error\": \"Empty request body\"}");
