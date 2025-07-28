@@ -1,4 +1,4 @@
-A HTTP Wrapper for reading FSUIPC simulator variables, written in C.
+An HTTP Wrapper for reading FSUIPC simulator variables, written in C.
 Feature: efficient, minimal, taking ~1MB of RAM with <10ms response time (depending on the request).
 Usage: See provided DemoRequest.txt and DemoResponse.txt.
 
